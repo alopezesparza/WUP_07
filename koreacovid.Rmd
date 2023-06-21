@@ -27,17 +27,30 @@ state of a patient must be died or alive - we adjust that as well
   
 
 # Your Question - Is dying independent of sex?
-##Method 
-today we will analyze the Sex of the patient and the result whether or not theyre alive or dead. i will use the variables in the collection of Cat~cat. this is a type of problem that we can use our helper file for, to copy into our project and get the correct results.
-
+##Method   
+today we will analyze the Sex of the patient and the result whether or not theyre alive or dead. i will use the variables in the collection of Cat~cat. this is a type of problem that we can use our helper file for, to copy into our project and get the correct results.  
+  
 
 
 
 ## Graphical results - use ggplot commands to do this  
 
+```{r}
+dd2 <- kRdata %>% group_by(result,Sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
 
-  
+# the group_by followed by summarize(count=n())
+
+basicC <- ggplot(dd2,aes(x=result,y=count,fill=Sex))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```  
+this graph is showing me that in the one on the far left is saying the most people survived and that there were only a small number of people dead when going by the count of people. the second graph on the far right is showing us the percentages of these people but this graph is showing that far more people died, about 37% of women died and about 63% of men died, majoritey of deaths we made by men.    
+    
 
 
 
