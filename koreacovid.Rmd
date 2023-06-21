@@ -25,9 +25,10 @@ Some of the data was uncoded for sex - sex must be just male or female
 77 of the data entries were coded sex  as blank, so we omit these.
 state of a patient must be died or alive - we adjust that as well   
   
+
 # Your Question - Is dying independent of sex?
-
-
+##Method 
+today we will analyze the Sex of the patient and the result whether or not theyre alive or dead. i will use the variables in the collection of Cat~cat. this is a type of problem that we can use our helper file for, to copy into our project and get the correct results.
 
 
 
