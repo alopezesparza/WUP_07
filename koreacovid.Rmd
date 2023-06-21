@@ -49,6 +49,7 @@ basicC + geom_bar(stat="identity",position="dodge")
 basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```  
+
 this graph is showing me that in the first one, most people survived and that there were only a small number of people dead when going by the count of people. the second graph is showing us the percentages of these people but this graph is showing that far more people died, about 37% of women died and about 63% of men died, majority of deaths we made by men.    
     
 ## Numerical results
@@ -56,12 +57,18 @@ this graph is showing me that in the first one, most people survived and that th
 table1 <- xtabs(~result + Sex, data=kRdata)
 rowPerc(table1)
 colPerc(table1)
-```
-the first chart says that of all the people that are still alive 56% are female and 44% are males. in the people that are dead 36% are females and 64% are men. this shows that the dead category is dominating with the deaths of males.another way to look at this, as stated in the secpnd table, 98.7% of women of still alive while 1.4% are dead and 97% of males are alive and 3% are dead. although the deaths arent a big percent, the male deaths are a little over more than half of the female deaths   
+```  
+
+the first chart says that of all the people that are still alive 56% are female and 44% are males. in the people that are dead 36% are females and 64% are men. this shows that the dead category is dominating with the deaths of males.another way to look at this, as stated in the secpnd table, 98.7% of women of still alive while 1.4% are dead and 97% of males are alive and 3% are dead. although the deaths arent a big percent, the male deaths are a little over more than half of the female deaths     
+
 ## Inferential results 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```  
 
-
-
-
+in the group of people who are still alive there are 1831 females and 1411 males, and dead there are 25 females and 44 males. the p-value is 12/1000 the chi square test says . According to the Fishers Exact Test for count Data, the odds of females living is 2.3 times greater than the males living. males are more likely to die of covid than females are   
+  
 ## Conclusions
 
