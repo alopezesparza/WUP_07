@@ -68,7 +68,8 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```  
 
-in the group of people who are still alive there are 1831 females and 1411 males, and dead there are 25 females and 44 males. the p-value is 12/1000 the chi square test says . According to the Fishers Exact Test for count Data, the odds of females living is 2.3 times greater than the males living. males are more likely to die of covid than females are   
+in the group of people who are still alive there are 1831 females and 1411 males, and dead there are 25 females and 44 males. the p-value is 12/1000 the chi square test says . According to the Fishers Exact Test for count Data, the odds of females living is 2.3 times greater than the males living. males are more likely to die of covid than females are     
   
 ## Conclusions
 
+in todays class we used our cat~cat helper file to assist us while trying to solve this problem. we started off by forking a code and putting that code into our posit and starting the assignment by putting our credentials and changing the name and date and committing. we then went on to run the first code given to us to open up our data in the environmental tab. Next, we created a method for what we were about to do and how we were going to do it. we followed that by opening out helper file cat~cat to retrieve our first code for our graphs, we got the code, changed it to match our data and ran that for our graphs, we reviewed and explained what we saw and comitted. we went back to our helper file to retrieve a code for our numerical results to give us our table with our data put into numerical form. we reviewed, explained, and comitted. finally, for our inferential results we used our helper file for the last time to get a code for our table. we ran that code and got our results. we came to the conclusion that the deaths of males due to covid are higher than those of women in Korea.   
